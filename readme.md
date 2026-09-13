@@ -2,6 +2,8 @@
 
 Actividad de la Semana 6 de Desarrollo Web: catálogo de productos dinámico construido con JavaScript, manipulando el DOM y trabajando con arrays de objetos.
 
+**Ejercicios 1 a 5 resueltos.
+
 ## Consigna
 
 A partir de un array de productos ya definido, completar las funciones de `js/app.js` para:
@@ -22,6 +24,7 @@ A partir de un array de productos ya definido, completar las funciones de `js/ap
 
 ```
 ├── index.html
+├── README.md
 └── js/
     └── app.js
 ```

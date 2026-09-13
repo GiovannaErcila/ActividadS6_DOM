@@ -1,7 +1,5 @@
 
-// =====================================================
 // DATOS
-// =====================================================
 
 const productos = [
 
@@ -72,9 +70,7 @@ const productos = [
 ];
 
 
-// =====================================================
 // ELEMENTOS DEL DOM
-// =====================================================
 
 const catalogo =
     document.querySelector("#catalogo");
@@ -101,10 +97,8 @@ const sinResultados =
     document.querySelector("#sinResultados");
 
 
-// =====================================================
 // EJERCICIO 1
 // MOSTRAR PRODUCTOS EN LA PÁGINA
-// =====================================================
 
 function mostrarProductos(listaProductos) {
 
@@ -164,11 +158,8 @@ function mostrarProductos(listaProductos) {
 
 }
 
-
-// =====================================================
 // EJERCICIO 2
 // MOSTRAR SOLAMENTE PRODUCTOS DISPONIBLES
-// =====================================================
 
 function mostrarDisponibles() {
 
@@ -183,10 +174,8 @@ function mostrarDisponibles() {
 }
 
 
-// =====================================================
 // EJERCICIO 3
 // MOSTRAR SOLAMENTE NOTEBOOKS
-// =====================================================
 
 function mostrarNotebooks() {
 
@@ -197,37 +186,22 @@ function mostrarNotebooks() {
 }
 
 
-// =====================================================
 // EJERCICIO 4
 // MOSTRAR LOS PRIMEROS CUATRO PRODUCTOS
-// =====================================================
-//
-// PENDIENTE: se completa mañana.
-//
 
 function mostrarCuatroProductos() {
 
     // PASO 1:
     // Obtener los primeros cuatro productos.
 
-    const primerosCuatro = /* COMPLETAR */;
+    const primerosCuatro = productos.slice(0, 4);
 
-
-    // PASO 2:
-    // Mostrar los productos obtenidos.
-
-    /* COMPLETAR */
-
+mostrarProductos(primerosCuatro);
 }
 
 
-// =====================================================
 // EJERCICIO 5
 // BUSCAR PRODUCTOS POR NOMBRE
-// =====================================================
-//
-// PENDIENTE: se completa mañana.
-//
 
 function buscarProductos() {
 
@@ -235,27 +209,23 @@ function buscarProductos() {
     // Obtener lo que escribió el usuario
     // y convertirlo a minúsculas.
 
-    const textoBuscado = /* COMPLETAR */;
+    const textoBuscado = buscador.value.toLowerCase();
 
 
     // PASO 2:
     // Obtener únicamente aquellos productos
     // cuyo nombre contenga el texto buscado.
 
-    const resultados = /* COMPLETAR */;
+const resultados = productos.filter(producto =>
+    producto.nombre.toLowerCase().includes(textoBuscado)
+);
 
-
-    // PASO 3:
-    // Mostrar los resultados obtenidos.
-
-    /* COMPLETAR */
+mostrarProductos(resultados);
 
 }
 
 
-// =====================================================
 // EVENTOS
-// =====================================================
 
 btnTodos.addEventListener("click", function () {
 
@@ -287,9 +257,5 @@ buscador.addEventListener(
     buscarProductos
 );
 
-
-// =====================================================
-// CARGA INICIAL
-// =====================================================
 
 mostrarProductos(productos);
